@@ -9,12 +9,54 @@ body {
     width: 100%;
 }
 #menu{
-    position: absolute;
+    position: sticky;
+    width: 100%;
+    background-color: whitesmoke;
+    top: 0;
+}
+#menu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#menu ul li{
+    list-style-type: none;
+    margin: 15px;
+}
+#menu ul li button{
+    padding: 5px;
+}
+
+/* MODAL */
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
     width: 500px;
     height: 700px;
-    background-color: whitesmoke;
-    overflow: scroll;
 }
+
+.modal-content{
+    background-color: #fefefe;
+    width: 500px;
+    height: 700px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+.close{
+    color: #aaa;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    font-size: 50px;
+    padding: 0 10px 0 0;
+    font-weight: bold;
+}
+
+/* PLATEAU */
 #tray {
     display: grid;
     margin: auto;
